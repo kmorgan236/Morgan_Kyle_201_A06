@@ -1,7 +1,7 @@
 ---
 title: "Assignment 6"
 subtitle: "STAT 201"
-author: "YOUR NAME"
+author: "Kyle Morgan"
 
 format:
   html:
@@ -305,7 +305,7 @@ min_median = min(CO_df$median_annual_temp)
 yr_min_median = CO_df$year[which.min(CO_df$median_annual_temp)]
 
 
-print(paste0("The Colorado maximum median annual temperature of ", max_median_temp, " occurred in ", yr_max_median, " and the minimum median annual temperature of ", min_median_temp, " occurred in ", yr_min_median, "."))
+print(paste0("The Colorado maximum median annual temperature of ", max_median, " occurred in ", yr_max_median, " and the minimum median annual temperature of ", min_median, " occurred in ", yr_min_median, "."))
 ```
 
 

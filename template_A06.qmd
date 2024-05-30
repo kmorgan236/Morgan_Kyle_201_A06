@@ -184,15 +184,9 @@ Store the output as a vector and print the results.
 ```{r}
 
 points_per_game
-
-round_func = function(x){
-  round(x, 2)
+for(k in points_per_game){
+  apply
 }
-
-value_vec = sapply(points_per_game,round_func)
-
-value_vec
-
 
 ```
 
@@ -214,22 +208,6 @@ ie: 91 rounds to 90; 173 rounds to 200; 1450 rounds to 1000
 Hint: use `MARGIN = 1:2` to apply the function to each value instead of only a row/col.
 
 ```{r}
-
-round_func2 = function(x){
-  if (x < 100){
-    return(round(x, -1))
-  }
-  if (x  < 1000){
-    return(round(x, -2))
-  }
-  if (x < 10000){
-    return(round(x, -3))
-  }
-}
-
-mat_rand
-apply(mat_rand, MARGIN = 1:2, round_func2)
-
 
 ```
 
