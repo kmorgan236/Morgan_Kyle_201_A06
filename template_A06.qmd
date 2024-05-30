@@ -103,6 +103,9 @@ Extract the value `8162` (LeBron James points) in 2 different ways:
 
 ```{r}
 
+player_info[[2]][[4]]
+player_info$LJ$points
+
 ```
 
 
@@ -113,6 +116,20 @@ Add a new named element to the end of each player's list called `height`. The he
 Print the `player_info` list to prove you were successful.
 
 ```{r}
+height = 78
+player_info$MJ = append(player_info$MJ, height, after = 5)
+
+height = 81
+player_info$LJ = append(player_info$LJ, height, after = 5)
+
+height = 78
+player_info$KB = append(player_info$KB, height, after = 5)
+
+height = 86
+player_info$KA = append(player_info$KA, height, after = 5)
+
+height = 85
+player_info$SO = append(player_info$SO, height, after = 5)
 
 ```
 
@@ -133,6 +150,28 @@ Note: this must still run correctly even if the values were to change or if anot
 
 ```{r}
 
+
+
+points_per_game = list()
+val_names = list()
+
+
+for(ii in 1:length(player_info)){
+  points_game = (player_info[[ii]][["points"]]/player_info[[ii]][["games_played"]])
+  player_names = names(player_info[ii])
+  print(points_game)
+  points_per_game = append(points_per_game, points_game)
+  val_names = append(val_names, player_names)
+}
+points_per_game
+val_names
+
+names(points_per_game) = val_names
+
+points_per_game
+
+
+
 ```
 
 
@@ -143,6 +182,11 @@ Use the list created in Part c and an appropriate apply function to round each v
 Store the output as a vector and print the results.
 
 ```{r}
+
+points_per_game
+for(k in points_per_game){
+  apply
+}
 
 ```
 
